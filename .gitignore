@@ -11,6 +11,7 @@
 # KDE directory preferences
 .directory
 node_modules
+.env
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
