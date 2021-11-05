@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const { config } = require('./config/index');
 
-const moviesApi = require('./routes/movies');
+const usersApi = require('./routes/user');
 const { logError, errorHandler, wrapError } = require('./utils/middleware/errorHandlers');
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
@@ -16,7 +16,7 @@ app.use(wrapError)
 app.use(errorHandler)
 
 
-moviesApi(app);
+usersApi(app);
 //catch 404
 app.use(notFoundHandler);
 app.listen(config.port, function () {
